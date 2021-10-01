@@ -5,7 +5,6 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour
 {
 
-
     [SerializeField] float speed;
     [SerializeField] float rotationspeed=100f;
  
@@ -19,26 +18,35 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float posX = transform.position.x;
 
-
-        //Movimientos y rotacion
         float desplX = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * Time.deltaTime * speed * desplX, Space.World);
         float desplY = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.up * Time.deltaTime * speed * desplY, Space.World); 
         float desplR = Input.GetAxis("Rotacion");
+
+        float posX = transform.position.x;
+        float posY = transform.position.y;
+
+        float limiteX = 15f;
+        float limiteY = 15f;
+        float menoslimiteY = 2f;
+
+        if ((posX < limiteX || desplX < 0f ) && (posX > -limiteX || desplX > 0f))
+        {
+            transform.Translate(Vector3.right * Time.deltaTime * speed * desplX, Space.World);
+        }
+
+        if ((posY < limiteY || desplY < 0f ) && (posY > menoslimiteY || desplY > 0f))
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * speed * desplY, Space.World);
+        }
+        
+      
+
         transform.Rotate(0f, 0f, desplR * Time.deltaTime * -rotationspeed);
 
-        //Limites
-        if (posX > 10f && desplX > 0f)
-        {
-            transform.position = new Vector3 (posX, transform.position.y, transform.position.z);
 
-        }
-      
-    
-    
+
+
     }
 
 
