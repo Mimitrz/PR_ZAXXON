@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class MovimientoColumna : MonoBehaviour
 {
-    float naveSpeed;
     
-   
+    float speed;
+    public InitGame inicioJuego;
+
     // Start is called before the first frame update
     void Start()
     {
-        naveSpeed = 30f;
+        inicioJuego = GameObject.Find("InicioDeJuego").GetComponent<InitGame>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.back * Time.deltaTime * naveSpeed);
+        speed = inicioJuego.juegoSpeed;
+        transform.Translate(Vector3.back * Time.deltaTime * speed);
     }
 }
