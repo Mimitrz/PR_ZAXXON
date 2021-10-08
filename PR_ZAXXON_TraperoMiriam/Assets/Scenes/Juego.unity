@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 1518636601}
   - component: {fileID: 1518636600}
   m_Layer: 0
-  m_Name: Instanciador
+  m_Name: InstanciadorColumna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
