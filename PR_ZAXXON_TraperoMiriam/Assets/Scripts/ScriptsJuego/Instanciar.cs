@@ -21,7 +21,17 @@ public class Instanciar : MonoBehaviour
         inicioJuego = GameObject.Find("InicioDeJuego").GetComponent<InitGame>();
 
         StartCoroutine("CrearColumna");
-        
+
+        //Crear columnas iniciales para el momento donde no hay
+        float posZcolumna1 = 150f;
+        float posZ = transform.position.z;
+        float columnasIniciales = (posZ - posZcolumna1) / distance;
+
+        columnasIniciales = Mathf.Round(columnasIniciales);
+        print(columnasIniciales);
+
+
+
     }
 
     // Update is called once per frame
@@ -39,7 +49,7 @@ public class Instanciar : MonoBehaviour
             float speed;
             speed = inicioJuego.juegoSpeed;
             intervalo = distance / speed;
-            print(intervalo);
+            
 
             float randomX = Random.Range(-20f, 20f);
             Vector3 newPos = new Vector3(randomX, instantiatePos.position.y, instantiatePos.position.z);

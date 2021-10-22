@@ -7,12 +7,12 @@ public class Movimiento : MonoBehaviour
 
     [SerializeField] float speed;
     [SerializeField] float rotationspeed = 100f;
- 
+    public InitGame inicioJuego;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        inicioJuego = GameObject.Find("InicioDeJuego").GetComponent<InitGame>();
     }
 
     // Update is called once per frame
@@ -51,5 +51,15 @@ public class Movimiento : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        speed = inicioJuego.juegoSpeed;
 
+        if (other.gameObject.layer == 6)
+        {
+            inicioJuego.juegoSpeed = 0f;
+            
+            inicioJuego.alive = false;
+        }
+    }
 }
