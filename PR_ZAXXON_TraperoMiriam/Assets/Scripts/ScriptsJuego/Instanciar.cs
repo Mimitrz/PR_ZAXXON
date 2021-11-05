@@ -8,16 +8,17 @@ public class Instanciar : MonoBehaviour
     [SerializeField] Transform instantiatePos;
     float intervalo;
     [SerializeField] float distance;
-
+    
     //Acceder al script con las variables generales
-    InitGame inicioJuego;
+    public InitGame inicioJuego;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        inicioJuego = GameObject.Find("InicioDeJuego").GetComponent<InitGame>();
         //intervalo = 0.5f;
-        distance = 30f;
+        distance = inicioJuego.obstdistancia;
         inicioJuego = GameObject.Find("InicioDeJuego").GetComponent<InitGame>();
 
         StartCoroutine("CrearColumna");

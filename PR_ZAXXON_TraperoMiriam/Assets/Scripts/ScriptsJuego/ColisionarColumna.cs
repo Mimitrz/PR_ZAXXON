@@ -6,6 +6,6 @@ public class ColisionarColumna : MonoBehaviour
 {
     private void OnTriggerEnter(Collider ColumnaColision)
     {
-        print("Choco" + ColumnaColision.gameObject.tag);
+        //print("Choco" + ColumnaColision.gameObject.tag);
     }
 }

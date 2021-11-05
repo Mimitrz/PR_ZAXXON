@@ -51,7 +51,7 @@ public class Movimiento : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         speed = inicioJuego.juegoSpeed;
 

@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class InitGame : MonoBehaviour
+public class ConfigVars : MonoBehaviour
 {
-    public float juegoSpeed;
-    public bool alive;
-    public float obstdistancia = 30f;
+
+    static public float musicVolume = 50f;
+    static public int numLives;
+    static public int difficulty;
+    [SerializeField] Text volumeText;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        juegoSpeed = 20f;
-        alive = true;
+        
     }
 
     // Update is called once per frame
