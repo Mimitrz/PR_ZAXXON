@@ -54,6 +54,10 @@ public class Movimiento : MonoBehaviour
 
     }
 
+    //int number = 1;
+    //float inicioTiempo = 0f;
+    //float finTiempo = 5f;
+    
     void OnTriggerEnter(Collider other)
     {
         speed = inicioJuego.juegoSpeed;
@@ -65,11 +69,23 @@ public class Movimiento : MonoBehaviour
             inicioJuego.alive = false;
             GameObject.Find("EmptyNave").SetActive(false);
             SceneManager.LoadScene(3);
+
+
         }
     }
 
-
-    /*public void Chocar()
+   /* public void Espera()
+    {
+        inicioTiempo += Time.deltaTime;
+        if(inicioTiempo>=finTiempo)
+        {
+            inicioTiempo = 0f;
+            number++;
+            SceneManager.LoadScene(3);
+        }
+    }
+    
+    public void Chocar()
     {
         print("Hola");
         ConfigVars.numLives--;
@@ -82,7 +98,7 @@ public class Movimiento : MonoBehaviour
 
     public void Morir()
     {
-        
+
         inicioJuego.juegoSpeed = 0f;
         inicioJuego.alive = false;
         GameObject.Find("EmptyNave").SetActive(false);
