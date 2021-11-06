@@ -4,41 +4,32 @@ using UnityEngine;
 
 public class Disparo : MonoBehaviour
 {
-    
-  /*  public Rigidbody balaPrefab;
-    public Transform canon;
-    float disparador;
-    public float tiempoDisparo = 0.1f;
-    float speedDisparo = 10f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Disparar();
-    }
+    public GameObject bala;
+    public Transform spawnPoint;
+    public float shotForce = 1500;
+    public float shotRate = 0.5f;
+    float shotRateTime = 0;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "Bala")
+        if (Input.GetButtonDown("Disparo"))
         {
-            Destroy(other.gameObject);
-        }
-    }*
+            if(Time.time>shotRateTime)
+            {
+                print("se dispara");
 
-    void Disparar()
-    {
-        if(Input.GetKeyDown("space") && Time.time > disparador)
-        {
-            disparador = Time.time + tiempoDisparo;
-            Rigidbody balaPrefabInstac;
-            balaPrefabInstac = Instantiate(balaPrefab, disparador.position, Quaternion.identity);
-            balaPrefabInstac.AddForce(disparador.forward * 100 * speedDisparo);
+                GameObject newBala;
+
+                newBala = Instantiate(bala, spawnPoint.position, spawnPoint.rotation);
+
+                newBala.GetComponent<Rigidbody>().AddForce(spawnPoint.forward * shotForce);
+
+                shotRateTime = Time.time + shotRate;
+
+                Destroy(newBala, 2);
+            }
         }
-        transform.Translate(Vector3.forward * Time.deltaTime * 15f);
-    }*/
+
+    }
 }

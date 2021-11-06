@@ -105,11 +105,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4449630148782128424}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817c1dfa11cd4784c945a3f9c20af113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bala: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  shotForce: 1500
+  shotRate: 0.5
 --- !u!54 &8193704128409155565
 Rigidbody:
   m_ObjectHideFlags: 0
