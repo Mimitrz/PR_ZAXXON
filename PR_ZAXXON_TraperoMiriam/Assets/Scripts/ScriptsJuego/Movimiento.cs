@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movimiento : MonoBehaviour
 {
 
     [SerializeField] float speed;
-    [SerializeField] float rotationspeed = 100f;
+    //[SerializeField] float rotationspeed = 100f;
     public InitGame inicioJuego;
 
     // Start is called before the first frame update
@@ -18,18 +19,20 @@ public class Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoverNave();
+        if (inicioJuego.alive)
+        {
+            MoverNave();
+        }
+
 
     }
-
-
 
 
     void MoverNave()
     {
         float desplX = Input.GetAxis("Horizontal");
         float desplY = Input.GetAxis("Vertical");
-        float desplR = Input.GetAxis("Rotacion");
+        //float desplR = Input.GetAxis("Rotacion");
 
         float posX = transform.position.x;
         float posY = transform.position.y;
@@ -48,7 +51,7 @@ public class Movimiento : MonoBehaviour
             transform.Translate(Vector3.up * Time.deltaTime * speed * desplY, Space.World);
         }
 
-        
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -58,8 +61,31 @@ public class Movimiento : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             inicioJuego.juegoSpeed = 0f;
-            
+            //Chocar();
             inicioJuego.alive = false;
+            GameObject.Find("EmptyNave").SetActive(false);
+            SceneManager.LoadScene(3);
         }
     }
+
+
+    /*public void Chocar()
+    {
+        print("Hola");
+        ConfigVars.numLives--;
+        if(ConfigVars.numLives == 0)
+        {
+            Morir();
+        }
+
+    }
+
+    public void Morir()
+    {
+        
+        inicioJuego.juegoSpeed = 0f;
+        inicioJuego.alive = false;
+        GameObject.Find("EmptyNave").SetActive(false);
+    }
+*/
 }

@@ -6,17 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
-    [SerializeField] Image livesImage;
-    public static int lives;
-    [SerializeField] Sprite [] spriteArray;
-    public Button play;
+
 
     // Start is called before the first frame update
     void Start()
     {
-       
-        lives = 3;
-        livesImage.sprite = spriteArray[lives];
+      
         
     }
 
@@ -28,6 +23,7 @@ public class UI : MonoBehaviour
 
     public void Comenzar()
     {
+        ConfigVars.numLives = 3;
         SceneManager.LoadScene(1);
 
     }
