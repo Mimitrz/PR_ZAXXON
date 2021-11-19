@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DestruirEstrella : MonoBehaviour
 {
-    [SerializeField] GameObject estrella;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +15,11 @@ public class DestruirEstrella : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+   void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "Puntos")
         {
             Destroy(gameObject);
-            Destroy(other.gameObject);
-
         }
     }
 
