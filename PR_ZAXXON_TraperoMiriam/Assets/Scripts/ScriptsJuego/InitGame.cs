@@ -10,7 +10,7 @@ public class InitGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        juegoSpeed = 20f;
+        juegoSpeed = 40f;
         alive = true;
     }
 

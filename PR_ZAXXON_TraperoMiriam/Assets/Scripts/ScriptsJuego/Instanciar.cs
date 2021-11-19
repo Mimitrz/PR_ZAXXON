@@ -53,7 +53,9 @@ public class Instanciar : MonoBehaviour
             
 
             float randomX = Random.Range(-20f, 20f);
-            Vector3 newPos = new Vector3(randomX, instantiatePos.position.y, instantiatePos.position.z);
+            float randomY = Random.Range(3f, 10f);
+
+            Vector3 newPos = new Vector3(randomX, randomY, instantiatePos.position.z);
             Instantiate(columna, newPos, Quaternion.identity);
 
             yield return new WaitForSeconds(intervalo);
