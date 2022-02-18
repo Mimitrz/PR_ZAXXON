@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 50e26aed28714894cb49da25901379b9, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 16bc8a9d5451ca44d8f70575adbece3a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999946, b: 0.99999946, a: 1}
+  m_IndirectSpecularColor: {r: 0.4660946, g: 0.4657923, b: 0.46188927, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 44df7ab28ed0a6b43bac616cd29511d2, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 75df2fc2a490b154480e81e31d86300a, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -287,6 +287,7 @@ MonoBehaviour:
   juegoSpeed: 30
   alive: 0
   obstdistancia: 30
+  scoreTx: {fileID: 1887858947}
 --- !u!4 &158545475
 Transform:
   m_ObjectHideFlags: 0
@@ -866,8 +867,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 26.757435, y: 12.483449, z: 27.307755}
-  m_Center: {x: 0.05605776, y: -4.4590755, z: 0.76232606}
+  m_Size: {x: 16.223364, y: 9.772795, z: 20.307703}
+  m_Center: {x: -0.2814672, y: -5.464641, z: 0.20633902}
 --- !u!23 &1329570711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -916,7 +917,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329570705}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 817c1dfa11cd4784c945a3f9c20af113, type: 3}
   m_Name: 
@@ -1052,7 +1053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1060,9 +1061,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c993c1c59916dc349ac203bc59bd6dac, type: 3}
+    m_Font: {fileID: 12800000, guid: abb2938a0ae9ca54c9f8dc5fb962b288, type: 3}
     m_FontSize: 21
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40

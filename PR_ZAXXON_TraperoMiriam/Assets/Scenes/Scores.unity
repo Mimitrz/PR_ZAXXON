@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 1}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: -0.7504, y: -0.9892}
+  m_SizeDelta: {x: 1959.6089, y: 1113.5383}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163710950
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9c1aaff5b2a99f54e81b172e1014c432, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90e74dbb0eec4b4468b795a645c436a7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -530,6 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfde499dc73cd144683d175de303019c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreTx: {fileID: 1447885867}
 --- !u!1 &330964696
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,9 +815,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72acea0457377c44f9b70f826fe6b664, type: 3}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: abb2938a0ae9ca54c9f8dc5fb962b288, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -935,8 +936,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: 103}
-  m_SizeDelta: {x: 315.294, y: 56.4999}
+  m_AnchoredPosition: {x: 2, y: 50}
+  m_SizeDelta: {x: 350.8088, y: 59.1686}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1447885867
 MonoBehaviour:
@@ -959,19 +960,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72acea0457377c44f9b70f826fe6b664, type: 3}
-    m_FontSize: 31
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 4810edcf756cc264cb1449f9f796f731, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 41
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'YOUR SCORE IS:'
+  m_Text: 
 --- !u!222 &1447885868
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1038,9 +1039,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72acea0457377c44f9b70f826fe6b664, type: 3}
-    m_FontSize: 18
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: abb2938a0ae9ca54c9f8dc5fb962b288, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40

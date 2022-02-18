@@ -424,6 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  inicioJuego: {fileID: 0}
 --- !u!4 &1329570707
 Transform:
   m_ObjectHideFlags: 0

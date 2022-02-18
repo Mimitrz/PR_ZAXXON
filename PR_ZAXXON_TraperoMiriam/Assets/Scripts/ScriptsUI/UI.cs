@@ -6,22 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
-
+    [SerializeField] Text scoreTx;
 
     // Start is called before the first frame update
     void Start()
     {
 
+        GameManager.globalScore = 0;
         
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
+        scoreTx.text = " " + GameManager.globalScore;
     }
 
+    public void Scores()
+    {
+
+    }
     public void Comenzar()
     {
         
