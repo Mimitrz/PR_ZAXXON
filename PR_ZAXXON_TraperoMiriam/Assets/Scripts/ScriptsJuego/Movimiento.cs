@@ -10,6 +10,8 @@ public class Movimiento : MonoBehaviour
     //[SerializeField] float rotationspeed = 100f;
     public InitGame inicioJuego;
 
+    public GameObject expl;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,33 +65,20 @@ public class Movimiento : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             inicioJuego.juegoSpeed = 0f;
-            //Chocar();
+           
             inicioJuego.alive = false;
             GameObject.Find("EmptyNave").SetActive(false);
-            SceneManager.LoadScene(3);
-
+            Instantiate(expl, transform.position, transform.rotation);
+            Invoke("Morir", 3);
 
         }
     }
 
 
-    /* public void Chocar()
-     {
-         print("Hola");
-         ConfigVars.numLives--;
-         if(ConfigVars.numLives == 0)
-         {
-             Morir();
-         }
-
-     }
-
-     public void Morir()
+    public void Morir()
      {
 
-         inicioJuego.juegoSpeed = 0f;
-         inicioJuego.alive = false;
-         GameObject.Find("EmptyNave").SetActive(false);
-     }
- */
+        SceneManager.LoadScene(3);
+    }
+    
 }

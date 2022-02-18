@@ -11,8 +11,8 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        GameManager.globalScore = 0;
+        scoreTx.text =GameManager.globalScore.ToString();
+      
         
     }
 
@@ -20,13 +20,10 @@ public class UI : MonoBehaviour
     void Update()
     {
        
-        scoreTx.text = " " + GameManager.globalScore;
+        
     }
 
-    public void Scores()
-    {
-
-    }
+   
     public void Comenzar()
     {
         
