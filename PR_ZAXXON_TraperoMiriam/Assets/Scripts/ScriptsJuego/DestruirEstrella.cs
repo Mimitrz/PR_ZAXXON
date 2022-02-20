@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class DestruirEstrella : MonoBehaviour
 {
+    //AudioSource audioSource;
+    //[SerializeField] AudioClip estrella;
+
     // Start is called before the first frame update
     void Start()
     {
+        //audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -17,8 +21,9 @@ public class DestruirEstrella : MonoBehaviour
     }
    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Puntos")
+        if (other.gameObject.name == "Estrella")
         {
+           // audioSource.PlayOneShot(estrella, 1f);
             Destroy(gameObject);
         }
     }
